@@ -43,8 +43,11 @@ for ( category, pkgs ) in packages.iteritems():
 reg = re.compile('^(.*)@PACKAGES@(.*)$')
 
 for rstfile in glob.glob( '{}/*.rst'.format( templates_dir ) ):
-    category = re.sub ( '\.rst', '', rstfile )
-    outrst = open ( '{}/{}'.format( source_dir, rstfile ), "w" )
+    print "rstfile = {}".format(rstfile)
+    basefile = re.sub ( '^.*\/', '', rstfile )
+    category = re.sub ( '\.rst$', '', basefile )
+    print "category = {}, rstfile = {}".format(category, rstfile)
+    outrst = open ( '{}/{}.rst'.format( source_dir, category ), "w" )
     with open( rstfile, 'r' ) as file:
         for line in file:
             if ( reg.match ( line ) ):
