@@ -1,0 +1,6 @@
+NAME = HPCPorts
+URL = https://github.com/tskisner/hpcports
+LICENSE = UC 3-clause BSD
+CATEGORY = system
+SHORT = Source-based package manager.
+LONG = This package manager attempts to solve the problems of building entire software stacks with consistent compilers on 
