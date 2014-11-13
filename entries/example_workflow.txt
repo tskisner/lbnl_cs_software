@@ -1,0 +1,6 @@
+NAME = Example for Workflow
+URL = https://blahblah.gov
+LICENSE = UC 3-clause BSD
+CATEGORY = workflow
+SHORT = Example for workflow category.
+LONG = Long description... 

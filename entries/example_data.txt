@@ -1,0 +1,6 @@
+NAME = Example for Data
+URL = https://blahblah.gov
+LICENSE = UC 3-clause BSD
+CATEGORY = data
+SHORT = Example for data category.
+LONG = Long description... 

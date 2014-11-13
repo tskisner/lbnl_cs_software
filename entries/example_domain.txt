@@ -1,0 +1,6 @@
+NAME = Example for Domain
+URL = https://blahblah.gov
+LICENSE = UC 3-clause BSD
+CATEGORY = domain
+SHORT = Example for science domain category.
+LONG = Long description... 

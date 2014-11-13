@@ -1,0 +1,6 @@
+NAME = Example for Math
+URL = https://blahblah.gov
+LICENSE = UC 3-clause BSD
+CATEGORY = math
+SHORT = Example for math category.
+LONG = Long description... 

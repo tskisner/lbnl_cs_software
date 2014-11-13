@@ -10,11 +10,9 @@ Contents:
    intro
    system
    math
-   frameworks
-   workflows
-   dataformats
-   datamanage
-   domains
+   data
+   workflow
+   domain
 
 
 Indices and tables
