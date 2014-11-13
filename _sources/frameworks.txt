@@ -1,6 +1,0 @@
-
-.. _frameworks:
-
-Software Frameworks
-==================================
-

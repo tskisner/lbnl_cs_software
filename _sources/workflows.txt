@@ -1,7 +1,0 @@
-
-.. _install:
-
-Workflow Management
-==================================
-
-
