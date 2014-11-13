@@ -1,0 +1,22 @@
+
+.. _dataformats:
+
+Data Formats
+==================================
+
+
+Describe data science / management here...
+
+
+Example for Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+https://blahblah.gov
+
+Example for data category.
+
+License:  UC 3-clause BSD
+
+Long description... 
+
+
