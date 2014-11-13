@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# HPCPorts documentation build configuration file, created by
+# LBNL software package list build configuration file, created by
 # sphinx-quickstart on Thu May 23 11:09:47 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'lbnlcsdoc'
+htmlhelp_basename = 'lbnlcsindx'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,8 +183,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'HPCPorts.tex', u'HPCPorts Documentation',
-   u'Theodore Kisner', 'manual'),
+  ('index', 'lbnlcsindx.tex', u'LBNL CS Software Index',
+   u'SEMC', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -213,8 +213,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'lbnlcs', u'LBNL CS Software',
-     [u'LBNL CS Area'], 1)
+    ('index', 'lbnlcsindx', u'LBNL CS Software Index',
+     [u'SEMC'], 1)
 ]
 
 # If true, show URL addresses after external links.

@@ -40,5 +40,19 @@ for ( category, pkgs ) in packages.iteritems():
     pp.pprint ( pkgs )
 
 
+reg = re.compile('^(.*)@PACKAGES@(.*)$')
 
+for rstfile in glob.glob( '{}/*.rst'.format( templates_dir ) ):
+    category = re.sub ( '\.rst', '', rstfile )
+    outrst = open ( '{}/{}'.format( source_dir, rstfile ), "w" )
+    with open( rstfile, 'r' ) as file:
+        for line in file:
+            if ( reg.match ( line ) ):
+                for ( pkgname, pkg ) in packages[ category ].iteritems():
+                    outrst.write ( '{}\n'.format(pkgname) )
+                    for key, val in pkg.iteritems():
+                        outrst.write ( '{} = {}\n'.format( key, val ) )
+            else:
+                outrst.write ( line )
+    outrst.close()
 
