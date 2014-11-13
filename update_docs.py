@@ -35,26 +35,29 @@ for entryfile in glob.glob( '{}/*.txt'.format( entries_dir ) ):
 
 # now go through all categories and generate the rst files
 
-for ( category, pkgs ) in packages.iteritems():
-    pp.pprint ( category )
-    pp.pprint ( pkgs )
+#for ( category, pkgs ) in packages.iteritems():
+#    pp.pprint ( category )
+#    pp.pprint ( pkgs )
 
 
 reg = re.compile('^(.*)@PACKAGES@(.*)$')
 
 for rstfile in glob.glob( '{}/*.rst'.format( templates_dir ) ):
-    print "rstfile = {}".format(rstfile)
+    #print "rstfile = {}".format(rstfile)
     basefile = re.sub ( '^.*\/', '', rstfile )
     category = re.sub ( '\.rst$', '', basefile )
-    print "category = {}, rstfile = {}".format(category, rstfile)
+    #print "category = {}, rstfile = {}".format(category, rstfile)
     outrst = open ( '{}/{}.rst'.format( source_dir, category ), "w" )
     with open( rstfile, 'r' ) as file:
         for line in file:
             if ( reg.match ( line ) ):
                 for ( pkgname, pkg ) in packages[ category ].iteritems():
                     outrst.write ( '{}\n'.format(pkgname) )
-                    for key, val in pkg.iteritems():
-                        outrst.write ( '{} = {}\n'.format( key, val ) )
+                    outrst.write ( '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n' )
+                    outrst.write ( '{}\n\n'.format( pkg[ 'URL' ] ) )
+                    outrst.write ( '{}\n\n'.format( pkg[ 'SHORT' ] ) )
+                    outrst.write ( 'License:  {}\n\n'.format( pkg[ 'LICENSE' ] ) )
+                    outrst.write ( '{}\n\n'.format( pkg[ 'LONG' ] ) )
             else:
                 outrst.write ( line )
     outrst.close()
